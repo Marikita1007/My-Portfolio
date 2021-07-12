@@ -1,0 +1,714 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@700&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+h2, h3{
+    font-weight: 700;
+}
+
+.navbar{
+    font-size: 25px;
+    background-color : transparent;
+}
+
+.navbar-light .navbar-brand{
+    color: #FFFAF2; 
+    font-size: 40px;
+    font-weight: bold;
+    margin-left: 15px;
+}
+
+.navbar-light .navbar-brand:hover{
+    color: #F89A9F;
+}
+
+
+.navbar-light .navbar-nav .nav-link{
+    color:#FFFAF2; 
+}
+
+.navbar-light .navbar-nav .nav-link:hover{
+    color: #F89A9F;
+} 
+
+/* add media query */
+@media screen and (min-width: 992px) and (max-width: 1100px){
+    .navbar-light .navbar-nav .nav-link{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    h2{
+        /* To make the page titles to middle */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0 !important;
+    }
+
+    ul{
+        color: #fffaf2;
+        background-color: rgba(245, 214, 171, 0.60)
+    }    
+    .navbar-light .navbar-nav .nav-link {
+        color: #333333;
+    }
+
+    .header-content h2{
+        /* to make  my name and button of home small*/
+        font-size: 30px !important;
+    }
+
+    #home{
+        /* To change the size of the HOME page */
+        height: 40vh;
+    }
+
+    .header-content{
+        min-height: 50vh !important;
+        padding-top: 30vh;
+    }
+
+
+    .header-content .project-button{
+        margin-top: 10vh;
+        flex-grow: 0;
+        font-size: 3vh !important;
+    }  
+    
+}
+
+.navbar-toggler{
+    color: #F5D6AB !important;
+}
+
+
+
+/* First page HOME*/
+img{
+    width: 100%;
+}
+
+/* Banner Image*/
+header{
+    background: url(../img/citypic1.jpg) no-repeat bottom center;
+    background-size: cover;
+    min-height: 70vh;
+    width: 100%;
+}
+
+.home {
+    background: rgba(96, 41, 50, 0.4);
+    min-height: 70vh;
+    width: 100%;
+} 
+
+.header-content{
+    z-index: 2; /* これが三枚目に重ねる（この場合一番上）*/
+    color: #FFFAF2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+
+
+/* button */
+.header-content .project-button{
+    margin-top: 10vh;
+    flex-grow: 0;
+    margin-bottom: 10px;
+    font-size: 5vh;
+}
+
+
+.project-button a{
+    text-decoration:underline;
+    color: white;
+}
+
+
+.project-button:hover{
+    transform: scale(1.1);
+}
+
+.header-content .project-button .btn{
+    opacity: 1;
+    outline: none !important;
+    border: none;
+    font-size: 30px;
+    color: white;
+}
+
+.header-content.project-button {
+    display: flex;
+}
+
+
+.header-content .project-button .btn:focus{
+    outline: none !important;
+    box-shadow: none;
+}
+
+
+/* Second page À PROPOS*/
+/* Title */
+#about{
+    color: #333333;
+    background-color: #FFFAF2;
+    min-height: 70vh;
+}
+
+#about .container p {
+    font-size: 3vmin;
+}
+
+/* TITLE TEXT OF ALL PAGES */
+.title-text{
+    padding-top: 10vh;
+    padding-left: 10vh;
+}
+
+.about-container{
+    height: 100vmin;
+    font-size: 4vmin;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5vmin;
+}
+
+
+/* Third page COMPÉTENCES*/
+#skills{
+    color: #333333;
+    background-color: #FFFAF2;
+    min-height: 70vh;
+}
+
+/* icons and skills container */
+.skills-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-top: 80px;
+}
+
+.skills-image{
+    height: 70px;
+    width: 70px;
+    margin-bottom: 50px;
+}
+
+#skills .col-lg-4 {
+    display: flex;
+}
+
+.skills-container .row {
+    flex-grow: 1;
+}
+
+/* title text and skills text */
+.skills-container .content-text{
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    background-color: #F5D6AB;
+    border-radius: 10px;
+    padding-top: 10px;
+
+    /* ここから下変更点 */
+    height: 20vh;
+/*     margin-left: 30px;
+    margin-right: 30px; */
+}
+
+/* ここから下変更点 */
+#skills p, #skills h3{
+    font-size: 3vmin;
+}
+
+.content-text a:link{
+    text-decoration: none;
+    color: #333333;
+}
+
+
+/* For mobiles */
+@media screen and (max-width: 768px) {
+
+    .skills-image{
+        margin: 0;
+    }
+
+    .skills-container .row{
+        margin: initial;
+    }
+   
+    .skills-container .content-text{
+        margin: 50px;
+    }
+
+     /* ここから下変更点 */
+    #skills p, #skills h3{
+        font-size: 20px;
+    }
+}
+
+/* Icons sizes */
+.skills-container i{
+   font-size:  5rem; 
+   text-align: center;
+}
+
+/* Fourth page RÉALISATIONS*/
+#realisations{
+    color: #333333;
+    background-color: #FFFAF2;
+    min-height: 70vh;
+}
+
+.realisations-col {
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.realisations-container img {
+    display: block;
+    margin-top: 80px;  
+}
+
+.realisations-title{
+    font-size: 3vmin; 
+    font-weight: bold;
+    margin-top: 25%;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (max-width: 992px){
+
+    .realisations-image{
+        display: flex;
+        justify-content: center;
+    } 
+
+    .realisations-container img {
+        width: 70vmin;
+        height: 50vmin;
+    }
+} 
+
+
+
+/* Fifth page Mes Formations*/
+#my_trainings{
+    color: #333333;
+    background-color: #FFFAF2;
+    min-height: 70vh;
+}
+
+.training-content{
+    margin-bottom: 1vh;
+    background-color: #F89A9F;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 2px 2px 2px #602932;
+    margin: 2%;
+    padding: 0;
+}
+
+.training-title{
+    width: 70%;
+    font-size: 3vh;
+    font-weight: bold;
+}
+
+.training-date{
+    background-color: #F5D6AB;
+    border-radius: 5px;
+    height: 10%;
+    font-size: 2.5vmin;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.training-outline{
+    width: 100%;
+    font-size: 3vh;
+}
+
+#realisations a{
+    text-decoration: none;
+    color: #333333;
+}
+
+
+@media screen and (min-width:576px) and (max-width: 992px){
+    .training-content{
+        border-radius: 7px; 
+    }
+
+    .training-title, .training-outline{
+        font-size: 15px;
+    }
+    .training-date{
+        border-radius: 10px; 
+        font-size: 2vh;
+        text-align: center;
+    }
+} 
+
+@media screen and (max-width: 576px){
+
+    #my_trainings h3{
+        margin: 20px;
+    }
+
+    #my_trainings .container{
+        background-color: #F5D6AB;
+        border-radius: 10px;
+        max-width: 90%;        
+
+    }
+
+    .training-title, .training-outline{
+        font-size: 1.3vh;
+    }
+
+    .training-title{
+        font-weight: bold;
+    }
+
+    .training-content{
+        display: flex;
+        flex-direction: inherit;
+        text-align: center;
+        margin: 10px;
+    }
+    .training-content, .training-date{
+        box-shadow: none;
+        background-color: #F5D6AB;
+        margin-left : 0;
+        margin-right: 0;
+    }
+    .training-date{
+        font-size: 1.5vh;
+        /* display: inline;
+        text-align: center; */
+        justify-content: flex-start;
+        background-color: #F89A9F;
+        border-radius: 10px;
+        padding-right: 1vw;
+        padding-left: 1vw;
+    }
+} 
+
+@media screen and (max-width: 384px){
+
+    .training-date{
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/* Seventh page DIPLÔMES*/
+#diplomes{
+    color: #333333;
+    background-color: #FFFAF2;
+    min-height: 70vh;
+}
+
+.diplome-content{
+    margin-top: 80px;  
+}
+
+.diplome-content .p-3{
+    display: flex;
+    justify-content: center; 
+}
+
+.diplome-date{
+    background-color: #F5D6AB;
+    border-radius: 10px;
+    font-size: 2vw;
+    padding: 1vw;
+}
+
+.master-date{
+    margin: 20px;
+}
+
+.diplome-info{
+    background-color: #F5D6AB;
+    border-radius: 10px;
+    font-size: 4vh;
+    flex-wrap: wrap;
+}
+
+
+.diplome-info strong{
+    word-spacing: 3px;
+}
+
+
+@media screen and (min-width:576px) and (max-width: 992px){
+    .diplome-info,  .diplome-date{
+        font-size: 1.7vh;
+    }
+    .diplome-date{
+        border-radius: 10px;
+    }
+} 
+
+
+@media screen and (max-width: 576px){
+    .master-date{
+        margin: 1px;
+    }
+    .diplome-date{
+        background-color: #F5D6AB;
+        border-radius: 5px;
+        font-size: 2vh;
+    }
+    .diplome-info{
+        background-color: #F5D6AB;
+        border-radius: 5px;
+        font-size: 1.5vh;
+        flex-wrap: wrap;
+    }
+    
+}
+
+/* eighth page INTÉRÊTS*/
+#interests{
+    color: #333333;
+    background-color: #FFFAF2;
+    min-height: 70vh;
+}
+
+.interests-container{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    /* I'm not sure if this is a good way */
+    margin-top: 80px;  
+}
+
+.interests-image {
+    justify-content: center;
+}
+
+.interests-container img{
+    display: block;
+    max-width: 30%;
+    height: auto;      
+}
+
+.interests-container .interests-title{
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+}
+
+.interests-container p{
+    padding-top: 5vh;
+}
+
+@media screen and (max-width:768px){
+    .interests-container img{
+        max-width: 25%;
+    }
+}
+
+/* last page CONTACT */
+#contact{
+    color: #333333;
+    background-color: #FFFAF2;
+    min-height: 70vh;
+}
+
+.contact-content{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    background-color: #F5D6AB;
+    border-radius: 10px;
+}
+
+.contact-content{
+    justify-content: space-around;
+}
+
+.contact-content span, .contact-content span:hover{
+    color: black;
+}
+
+.contact-link{
+    text-decoration: none;
+    color: #333333;
+}
+
+.contact-image{
+    height: 5vmin;
+    width: 5vmin;
+}
+
+.contact-content .col-sm-12{
+    display: table; 
+}
+
+.cv-container{
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.contact-link span{
+    font-size: 20px;
+
+}
+
+@media screen and (max-width: 767px){
+
+    .cv-container{
+        order: 1;
+    }
+
+    .adress-phone-content{
+        order: 2;
+        margin-top: 0;
+        width: 50%;
+    }
+
+    .contact-links-content{
+        order: 3;
+        margin-top: 0;
+        width: 50%;
+    }
+
+    .contact-image{
+        height: 15px;
+        width: 15px;
+        margin: 5px;
+    }
+
+    .contact-link span{
+        font-size: 2.5vmin;
+    }
+
+    .map-message-contents {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 576px){
+    .contact-content{
+        display: grid;
+        width: 80%;
+    } 
+    
+    .contact-image{
+        height: 20px;
+        width: 20px;
+        margin: 5px;
+    }
+}
+
+.map-content{
+    display: flex;
+    justify-content: center;
+}
+
+.message-form{
+    background-color: #F5D6AB;
+    padding: 2vh;
+    border-radius: 10px;
+}
+
+.form-control{
+    margin-bottom: 1vh;
+}
+
+.form-control:focus {
+    border-color: #F89A9F;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #F89A9F;
+}
+
+.message-form .btn{
+    background-color: #F5D6AB;
+    color: #333333;
+    border: 3px solid #FFFAF2;
+}
+
+@media screen and (max-width: 991px){
+
+    .message-form{
+        padding: 15px;
+    }
+
+    .form-control, .send-button{
+        border-radius: 10px;
+    }
+
+    .name-form, .firstname-form {
+        width: 70%;
+    }
+
+    .message{
+        height: 20vh;
+    }
+} 
+
+/* JavaScript Event back-to-top */
+#back-to-top{
+    position : fixed;
+    bottom : 40px;
+    right: 20px;
+    background-color: #F5D6AB;
+    border: 2px solid #FFFAF2;
+    width: 50px;
+    height: 40px;
+    font-size: 25px;
+    color: #FFFAF2;
+    text-align: center;
+    border-radius: 5%;
+    display: none; 
+}
+
+footer{
+    background-color: #F5D6AB;
+    
+}
+
+footer .footer-content a{
+    color: #333333;
+    text-decoration: none;
+    font-size: 2vh;
+}
+    
+
+
+
+
+
+
+
+
+
+
+  
