@@ -127,6 +127,7 @@ header{
     flex-grow: 0;
     margin-bottom: 10px;
     font-size: 5vh;
+    transition: all .2s ease-in-out;
 }
 
 
@@ -138,6 +139,7 @@ header{
 
 .project-button:hover{
     transform: scale(1.1);
+    animation-delay: 2s;
 }
 
 .header-content .project-button .btn{
