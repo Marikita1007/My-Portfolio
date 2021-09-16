@@ -281,8 +281,9 @@ header{
 }
 
 .realisations-col {
-    padding-left: 30%;
-    padding-right: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
 }
 
 .realisations-container img {
@@ -291,11 +292,8 @@ header{
 }
 
 .realisations-title{
-    font-size: 3vmin; 
+    font-size: 2vmin; 
     font-weight: bold;
-    margin-top: 25%;
-    justify-content: center;
-    align-items: center;
 }
 
 @media screen and (max-width: 992px){
